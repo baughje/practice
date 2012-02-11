@@ -1,11 +1,10 @@
 $total = 0;
 $num = 5;
 $wrong = 0;
+$correct = 0;
 
 puts Time.now
 until $total == $num do
-  
-$correct = 0;
   
 card1 = rand(10)
 card2 = rand(10)
