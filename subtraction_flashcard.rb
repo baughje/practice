@@ -9,9 +9,9 @@ $correct = 0;
   
 card1 = rand(10)
 card2 = rand(10)
-correct_answer = card1 + card2
+correct_answer = card1 - card2
 
-puts "\n\nWhat is #{card1} + #{card2}?"
+puts "\n\nWhat is #{card1} - #{card2}?"
 submitted_answer = gets.chomp
 integer_answer = submitted_answer.to_i
 
