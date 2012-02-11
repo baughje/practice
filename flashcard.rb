@@ -25,9 +25,8 @@ end
 
 $total += 1;
 
-puts "You got #{$wrong} wrong out of #{$total}.\n\n"
-
 end
+puts "You got #{$wrong} wrong out of #{$total}.\n\n"
 
 =begin
 
