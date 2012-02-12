@@ -1,3 +1,8 @@
+require 'rubygems'
+require 'chronic_duration' 
+d = 300 # seconds 
+d.times {|x| sleep 1; puts ChronicDuration.output(d - x)} 
+
 $total = 0;
 $num = 5;
 $wrong = 0;
