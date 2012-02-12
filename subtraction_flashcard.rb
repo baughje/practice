@@ -28,7 +28,16 @@ $total += 1;
 
 end
 
+if $wrong > $correct then
+  puts "You got more wrong than right.  You need more practice!\n\n";
+  elsif $wrong = 0 then
+    puts "You are a rock star!\n\n"
+elsif $wrong < $correct then
+  puts "You got more right than wrong.  Nice job.\n\n"
+else
 puts "You got #{$wrong} wrong out of #{$total}.\n\n"
+#puts "You answered #{$correct} correctly.  Good job!\n\n"
+end
 
 =begin
 
