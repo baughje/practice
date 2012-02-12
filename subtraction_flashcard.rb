@@ -2,6 +2,8 @@ $total = 0;
 $num = 5;
 $wrong = 0;
 $correct = 0;
+#$start_time = Time.now;
+#$total_time = Time.now - $start_time;
 
 puts Time.now
 until $total == $num do
