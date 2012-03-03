@@ -1,13 +1,5 @@
 def palindrome?(string)
-  string.downcase!
-	string.gsub!(/[\,\.\?\!\:\;\'\s+\"]/,"")
-	if string.reverse == string
-	  puts "true"
-  else
-    puts "false"
-  end
+  string = string.downcase.string.gsub!(/[\,\.\?\!\:\;\'\s+\"]/,"")
+	string.reverse == string
 end
 
-palindrome?("kay'ak")
-palindrome?("what")
-palindrome?("Madam, I'm Adam!")
