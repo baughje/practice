@@ -36,5 +36,47 @@ class TestRockPaperScissors < Test::Unit::TestCase
   def test_same_strategy
     assert_equal rps_game_winner([["Armando", "P"], ["Dave", "P"]]), ["Armando", "P"]
   end
+  
+  def test_case_insensitive
+    assert_equal rps_game_winner([["Dave", "s"], ["Richard", "r"]]), ["Richard", "r"]
+  end
+  
+  def test_integration_there_can_be_a_tournament
+      assert_equal rps_tournament_winner(
+      [
+        [
+          [
+            ["Armando", "P"], ["Dave", "S"]
+          ],
+          [
+            ["Richard", "R"], ["Michael", "S"] ]
+        ],
+        [
+          [
+            ["Allen", "S"], ["Omer", "P"]
+          ],
+          [
+            ["David E.", "R"], ["Richard X.", "P"]
+          ]
+        ]
+      ]), ["Richard", "R"]
+    end
+
+    def test_tournament_returns_a_winner_for_simple_tournament
+      assert_equal rps_tournament_winner(
+        [
+          [
+            ["Armando", "P"], ["Dave", "S"]
+          ],
+          [
+            ["Richard", "R"], ["Michael", "S"]
+          ]
+        ]
+      ), [ "Richard", "R" ]
+    end
+
+    def test_tournament_returns_a_winner_for_a_more_complicated_tournament
+      assert_equal rps_tournament_winner([ [ "Armando", "S" ], [ "Dave", "R" ] ]), [ "Dave", "R" ]
+    end  
 end
   
